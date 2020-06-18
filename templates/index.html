@@ -1,0 +1,134 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>cancer predict</title>
+  <link rel="icon" href="{% static 'breast-cancer.png' %}">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="{% static 'css/styles.css' %}"/>
+  <script src="https://kit.fontawesome.com/9e363b886a.js" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bellota:wght@700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <section id="title">
+    <div class="container-fluid">
+      <!-- Nav Bar -->
+      <nav class="navbar navbar-expand-lg navbar-dark">
+        <img class="navbar-brand" src="{% static 'cancer logo.png' %}" width="2.7%">
+        <p class="par">cancerpredict</p>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link lin" href="#footer">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link lin" href="about">About predict</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+
+
+      <!-- Title -->
+
+      <div class="row">
+        <div class="col-lg-6">
+          <h1 class='tit'>What is predict?</h1>
+          <h4>Predict is a computerized 
+            breast cancer test has been developed to reduce the death rate. This breast cancer test made using machine
+            learning algorithm and methods, which are used to improve the accuracy of predicting cancer. </h4>
+          <!-- <a href="start"><button type="button" class="btn btn-dark btn-lg d-btn"><i class="fas fa-arrow-alt-circle-right"></i> start prediction</button></a> -->
+        </div>
+        <div class="col-lg-6">
+          <form method="POST" class="sec3">
+            {% csrf_token %}
+            <div class="form-group">
+              <input type="text" required class="form-control col-9" name="name" placeholder="Enter your name">
+            </div>
+            <div class="form-group">
+              <input type="text" required class="form-control col-9"  name="gender" placeholder="gender">
+            </div>
+            <div class="form-group">
+              <input type="number" class="form-control col-9" name="age" placeholder="age">
+            </div>
+            <div class="form-group">
+              <input type="email" required class="form-control col-9" name="email" placeholder="email">
+            </div>
+            <button  type="submit"  class="btn btn-dark btn-md d-btn"><i class="fas fa-arrow-alt-circle-right"></i> Start prediction</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+
+  <!-- Features -->
+  <section id="features">
+    <div class="row">
+      <div class="col-lg-4 sec">
+        <i class="icon1 fas fa-check-circle fa-4x"></i>
+        <h3>Easy to use.</h3>
+        <p>So easy to use, prediction on your fingertips</p>
+      </div>
+      <div class="col-lg-4 sec">
+        <i class="icon1 fas fa-dot-circle fa-4x"></i>
+        <h3>Elite Clientele</h3>
+        <p>We have all the features related to breast cancer.</p>
+      </div>
+      <div class="col-lg-4 sec">
+        <i class="icon1 fas fa-heart fa-4x"></i>
+        <h3>Breast Cancer</h3>
+        <p>Feed your faith and your fears will starve to death</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+
+  <section id="testimonials">
+
+    <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel" data-interval="4000">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <h2>What does predict do?</h2>
+          <h4>Predict asks for some details about the cancer. And it gives an output in the form of yes or no basis of severity of the cancer.</h4>
+          <img class="im" src="{% static 'computer.png' %}" alt="">
+
+        </div>
+        <div class="carousel-item">
+          <h2>Who is predict for?</h2>
+          <h4>Predict is for clinicians, patients and their families.<em>Patients should use it in consultation with a medical professional.</em></h4>
+          <img class="im" src="{% static 'patient.png' %}" alt=" ">
+        </div>
+
+        <div class="carousel-item">
+          <h2> get more info.(about predict)</h2>
+          <h4>To read more go to <a href="about">About predict</a></h4><br>
+          <img class="im" src="{% static 'study.png' %}" alt=" ">
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Footer -->
+
+  <footer id="footer">
+    <a href="https://www.facebook.com/profile.php?id=100007369208718"><img class="aa" src="{% static 'fb.png' %}" alt=""></a>
+    <a href="https://www.instagram.com/itz_me_vignesh_19/"><img class="aa" src="{% static 'insta.png' %}" alt=""></a>
+    <a href="lung.cancer.predictor@gmail.com"><img class="aa" src="{% static 'gmail.png' %}" alt=""></a>
+  </footer>
+
+</body>
+
+</html>
