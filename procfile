@@ -1,0 +1,1 @@
+web: gunicorn cancer.wsgi --log-file -
