@@ -1,0 +1,100 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>cancer predict</title>
+  <link rel="icon" href="{% static 'breast-cancer.png' %}">
+  <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@900&display=swap" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/9e363b886a.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <section id="title2">
+    <div class="container-fluid">
+      <!-- Nav Bar -->
+      <nav class="navbar navbar-expand-lg navbar-dark">
+        <img class="navbar-brand" src="{% static 'cancer logo.png' %}" width="3%" alt="">
+        <p class="par1">cancer predict</p>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="home">Home</a>
+            </li>
+           
+          </ul>
+        </div>
+      </nav>
+      <div class="top">
+        <h2 class="t-over">Overview</h2>
+        <ul>
+          <li>
+            <a href="#fst">
+              <p class="t-p"><img class="inf1" src="{% static 'info.png' %}" alt=""> Introduction</p>
+            </a>
+          </li>
+          <li>
+            <a href="#sec">
+              <p class="t-p"><img class="inf1" src="{% static 'info.png' %}" alt=""> Who is it for?</p>
+            </a>
+          </li>
+          <li>
+            <a href="#third">
+              <p class="t-p"><img class="inf1" src="{% static 'info.png' %}" alt="">How Predict works</p>
+            </a>
+          </li>
+          <li>
+            <a href="#four">
+              <p class="t-p"><img class="inf1" src="{% static 'info.png' %}" alt="">Who built Predict?</p>
+            </a>
+          </li>
+        </ul>
+      </div>
+  </section>
+
+  <div class="mid">
+    <h1 id="fst">Introduction</h1>
+    <p>Over the past decades, a continuous evolution related to cancer research has been performed. Scientists applied different methods, such as screening in early stage, in order to find types of cancer before they cause symptoms. Moreover, they have developed new strategies for the early prediction of cancer treatment outcome. With the advent of new technologies in the field of medicine, large amounts of cancer data have been collected and are available to the medical research community. However, the accurate prediction of a disease outcome is one of the most interesting and challenging tasks for physicians. As a result, ML methods have become a popular tool for medical researchers. These techniques can discover and identify patterns and relationships between them, from complex datasets, while they are able to effectively predict future outcomes of a cancer.</p>
+    <h1 id="sec">Who is it for?</h1>
+    <p>It is based on the report of checkups either the doctor or a normal user can check their status of the presence of cancer. As this is user friendly for both doctors and patients they can get the result in the easiest way.</p>
+    
+    <h1 id="third">How Predict works</h1>
+    <p>The estimates that Predict produces are based on scientific studies that have been conducted into how effective lung cancer treatments. We know from studies involving many thousands of people that the benefit from treatment is affected by the size and type of the cancer at diagnosis, Predict has been tested to make sure that the estimates it produces are as accurate as possible. We have used machine learning algorithm which suits as a best model to the data which is obtained from previous lung cancer results. As our model is trained on huge amount of data and a good algorithm it able to produce an accuracy rate of 96.1%. *These results may not be 100% sure but the model predicts good results upto 96%.</p>
+   
+    <h1 id="four">Who built cancerpredict?</h1>
+    <div class="row">
+      <div class="col-sm-4">
+
+
+      </div>          
+      <div class="col-sm-4">
+            <img style="height: 340px; width: 320px; text-align: center; border-radius: 50%;" src="{% static 'contactus.jpg' %}" ><h4 style="text-align: center;">Dugyala Vignesh Kumar</h4><p style="text-align: center;">Student Developer</p><p style="text-align: center;">+91 6304096944</p><div style="text-align: center;"><a target="blank" href="https://www.facebook.com/profile.php?id=100007369208718"><img style="width:10%; padding-right:2%;" src="{% static 'fb.png' %}" alt=""></a>
+              <a href="https://www.instagram.com/itz_me_vignesh_19/"><img style="width: 10%; padding-right:2%;" src="{% static 'insta.png' %}" target="blank" alt=""></a>
+              <a target="blank" href="https://www.linkedin.com/in/dugyala-vignesh-kumar-875363191"><img style="width: 10%; padding-right:2%;" src="{% static 'linkedin.png' %}"></a></div>
+      </div>
+      <div class="col-sm-4">
+
+        
+      </div> 
+          </div>
+        </div>
+    
+    
+  
+
+
+
+
+ 
+</body>
+</html>

@@ -1,0 +1,166 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+
+  <meta charset="utf-8">
+  <title>cancer predict</title>
+  <link rel="icon" href="{% static 'breast-cancer.png' %}">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/9e363b886a.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+  <section id="title1">
+    <div class="container-fluid">
+      <!-- Nav Bar -->
+      <nav class="navbar navbar-expand-lg navbar-dark">
+        <img class="navbar-brand" src="{% static 'cancer logo.png' %}" width="4.2%" alt="">
+        <p class="par">cancer predict</p>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#footer">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about">About predict</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <!-- Title -->
+
+      <div class="row">
+        <div class="col-lg-6">
+          <img class="im2" src="{% static 'robot.png' %}" alt="">
+        </div>
+        <div class="col-lg-6 rob-text">
+          <h1>Behind Predict!</h1>
+          <h4>Breast cancer is a prevalent cause of death. Many emerging techniques have been developed for early detection and treatment of breast cancer and to reduce the
+            number of deaths, and many aided breast cancer diagnosis methods have been used to increase the diagnostic accuracy</h4>
+        </div>
+      </div>
+    </div>  
+  </section>
+
+    <div class="note">
+      <h6><em>Hey..<strong>{{c.name}}</strong> please select the type of cancer you want to daignoise.</em></h6>
+      <select id="selectt" onchange="dis()">
+        <option value="nooption">Select</option>
+        <option value="breast">Breast Cancer</option>
+        <option value="lung">Lung Cancer</option>
+      </select>
+    </div>
+<br>
+    
+
+
+<div name="lung" class="lungdiv" id="mydiv">
+   <h3>Upload your Lung C.T Scan Image Here</h3>
+    <form enctype="multipart/form-data" action="lung" method="POST" >
+      {% csrf_token %}
+      <input  type="file" accept="image/*" name="img"><br>
+      <br>
+      <input class="lunginp" type="submit" value="Check!!">
+    </form>
+  
+</div>
+
+<div>
+  <form action="start" name="breast" method="POST" id="myForm" style="display: none;">
+    {% csrf_token %}
+    <div class="row"> 
+      <div class="col-sm-6 sec1">
+        <input class="btn btn-primary reset"  type="button" onclick="myFunction()" value="Reset">
+            <div class="form-group">
+              <label class="p-op">Clump Thickness <img title="Assesses if cells are mono- or multi-layered" class="inf" src="{% static 'info.png' %}"></label>
+              <input type="number" class="form-control col-6" required name="op1" placeholder="0-10" >
+            </div>
+
+            <div class="form-group">
+              <label class="p-op">Uniformity of Cell Size <img title="Evaluates the consistency in size of the cells in the sample."  class="inf" src="{% static 'info.png' %}"></label>
+              <input type="number" class="form-control col-6" required  name="op2" placeholder="0-10">
+            </div>
+
+            <div class="form-group">
+              <label class="p-op">Uniformity of Cell Shape <img title="Estimates the equality of cell shapes and identifies marginal variances." class="inf" src="{% static 'info.png' %}"></label>
+              <input type="number" class="form-control col-6"  required name="op3" placeholder="0-10">
+
+            </div>
+
+            <div class="form-group">
+              <label class="p-op">Marginal Adhesion <img title="Quantifies how much cells on the outdside of the epithelial tend to stick together." class="inf" src="{% static 'info.png' %}"></label>
+              <input type="number" class="form-control col-6" required  name="op4" placeholder="0-10">
+
+            </div>
+
+            <div class="form-group">
+              <label class="p-op">Single Epithelial Cell Size <img title=" Relates to cell uniformity, determines if epithelial cells are significantly enlarged." class="inf" src="{% static 'info.png' %}"></label>
+              <input type="number" class="form-control col-6" required  name="op5" placeholder="0-10">
+            </div>
+      </div>
+      <div class="col-sm-6 sec2">
+            <div class="form-group">
+              <label class="p-op">Bare Nuclei <img title="Calculates the proportion of the number of cells not surrounded by cytoplasm to those that are." class="inf" src="{% static 'info.png' %}"></label>
+              <input type="number" class="form-control col-6" name="op6" required placeholder="0-10">
+            </div>
+
+            <div class="form-group">
+              <label class="p-op">Bland Chromatin <img title="Rates the uniform texture of the nucleus in a range from fine to coarse." class="inf" src="{% static 'info.png' %}"></label>
+              <input type="number" class="form-control col-6" name="op7" required placeholder="0-10">
+            </div>
+
+            <div class="form-group">
+              <label class="p-op">Normal Nucleoli <img title="Determines whether the nucleoli are small and barely visible or larger, more visible, and more plentiful." class="inf" src="{% static 'info.png' %}"></label>
+              <input type="number" class="form-control col-6" name="op8" required placeholder="0-10">
+            </div>
+
+            <div class="form-group">
+              <label class="p-op">Mitoses <img title="Describes the level of mitotic (cell reproduction) activity" class="inf" src="{% static 'info.png' %}"></label>
+              <input type="number" class="form-control col-6" name="op9" required placeholder="0-10">
+            </div>
+            <br>
+            <input type="submit"  class="btn btn-primary" value="Check!">
+      </div>
+  </form>
+  
+  
+  <script>
+    function dis(){
+    var breast=document.getElementById("selectt");
+    var b=document.getElementById("myForm");
+    var l=document.getElementById("mydiv");
+    b.style.display=breast.value=="breast"?"block":"none";
+    l.style.display=breast.value=="lung"?"block":"none";
+  }
+  </script>
+
+  <footer id="footer">
+    <a href="https://www.facebook.com/profile.php?id=100007369208718"><img class="aa" src="{% static 'fb.png' %}" alt=""></a>
+    <a href="https://www.instagram.com/itz_me_vignesh_19/"><img class="aa" src="{% static 'insta.png' %}" alt=""></a>
+    <a href="lung.cancer.predictor@gmail.com"><img class="aa" src="{% static 'gmail.png' %}" alt=""></a>
+
+  </footer>
+  <script>
+    function myFunction() {
+      document.getElementById("myForm").reset();
+    }
+    </script> 
+</body>
+
+</html>

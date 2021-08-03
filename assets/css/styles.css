@@ -1,0 +1,240 @@
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+#title {
+  background-image: url('https://s3.amazonaws.com/noupe/2009/10/pattern-07.jpg');
+  color: #fff;
+}
+
+#title3 {
+  background-image: url('https://wallpaperaccess.com/full/1567784.jpg');
+  color: #fff;
+  margin: 5%;
+}
+
+h1 {
+  font-family: "Montserrat Alternates";
+  line-height: 1.5;
+  font-size: 3rem;
+}
+
+h2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 3rem;
+  line-height: 1.5;
+  font-weight: 600;
+}
+
+h3 {
+  font-family: "Montserrat Alternates", serif;
+  font-size: 1.3rem;
+}
+
+.par {
+  font-family: 'Bellota', cursive;
+  font-size: 1.5rem;
+  margin-left: -1%;
+  padding-top: 1%;
+  opacity: 0.6;
+}
+
+.container-fluid {
+  padding: 3% 15% 10%;
+}
+
+
+.icon1 {
+  color: #ef8172;
+  margin-bottom: 13px;
+}
+
+.icon1:hover {
+  color: #ff4c68;
+}
+
+.navbar {
+  padding: 0 0 4.5rem;
+}
+
+.nav-item {
+  padding: 0 18px;
+}
+
+.nav-link {
+  font-family: "Montserrat-Light", sans-serif;
+  font-size: 1.5rem;
+}
+
+.d-btn {
+  margin: 5% 3% 5% 0;
+  margin-right: 20px;
+}
+
+
+.im {
+  width: 15%;
+  margin: 20px;
+}
+
+#features {
+  padding: 5% 15%;
+  background-color: #fff;
+  position: relative;
+}
+
+
+.p-col {
+  padding: 3% 2%;
+}
+
+#testimonials {
+  padding: 7% 20%;
+  text-align: center;
+  background-image: url('https://wallpaperaccess.com/full/1567784.jpg');
+  color: #fff;
+}
+
+.pre {
+  width: 15%;
+  margin: 20px 20px 50px;
+}
+
+.sec {
+  text-align: center;
+  padding: 5%;
+}
+
+@media (max-width: 1028px) {
+  #title {
+    text-align: center;
+  }
+
+  .t-img {
+    position: static;
+  }
+}
+
+#footer {
+  padding: 1.5% 15%;
+  text-align: center;
+  background-image: url('https://wallpaperaccess.com/full/733906.jpg');
+  color: white;
+}
+
+.aa {
+  color: white;
+}
+
+.sec3 {
+  padding: 5%;
+  margin-left: 20%;
+}
+
+.note {
+  margin-left: 4%;
+  margin-right: 40%;
+  margin-top: 1.25rem;
+  padding: 1.25rem;
+  border: 1px solid #eee;
+  border-left-width: .25rem;
+  border-radius: .25rem;
+  box-sizing: border-box;
+  border-left-color: rgb(96, 162, 202);
+  border-bottom-color: rgb(96, 162, 202);
+  border-top-color: rgb(96, 162, 202);
+  border-right-color: rgb(96, 162, 202);
+}
+
+
+/* sec page */
+#title1 {
+  background-image: url('https://i0.wp.com/www.marktechpost.com/wp-content/uploads/2018/07/4k-wallpaper-android-wallpaper-astro-1146134.jpg?fit=2048%2C1152&ssl=1');
+  color: #fff;
+}
+
+.im2 {
+  width: 70%;
+  padding-left: 70px;
+}
+
+.p-op {
+  font-size: 1.5rem;
+}
+
+.sec1 {
+  text-align: left;
+  padding: 3%;
+  padding-left: 20%;
+}
+
+.sec2{
+  text-align: left;
+  padding: 3%;
+  padding-top: 6%;
+  padding-right: 20%;
+}
+
+.aa {
+  width: 3%;
+  padding: .5%;
+}
+
+.inf {
+  width: 4%;
+}
+
+.rob-text{
+  opacity: 0.8;
+}
+
+.reset{
+  margin-bottom: 10px;
+  margin-right: 60px;
+}
+
+
+
+/* about page */
+.top {
+  margin: 0 20%;
+}
+
+.mid {
+  margin: 5% 15%;
+}
+
+#title2 {
+  background-image: url('https://leahmerylharmon.com/wp-content/uploads/2012/02/Unknown-4.jpeg');
+}
+
+.par1 {
+  font-family: 'Bellota', cursive;
+  font-size: 1.5rem;
+  margin-left: -1%;
+  color: #fff;
+}
+
+.t-p {
+  font-family: serif;
+  font-size: 1rem;
+  color: white;
+}
+
+.t-over {
+  font-size: 1.5rem;
+  color: #fff;
+  font-family: sans-serif;
+  padding-bottom: 2%;
+}
+
+.inf1 {
+  width: 3%;
+  padding-right: 1%;
+}
+
+hr {
+  width: 50%;
+  height: 30px;
+}
+
